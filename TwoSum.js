@@ -18,7 +18,7 @@ const solucation1 = (nums, target) => {
 const solucation2 = (nums, target) => {
     let map = new Map()
     for(let i = 0; i < nums.length; i++){
-        if(map.get(target - nums[i]) !== undefined){
+        if(map.has(target - nums[i])){
             return [map.get(target - nums[i]),i]
         }
         map.set(nums[i],i)
