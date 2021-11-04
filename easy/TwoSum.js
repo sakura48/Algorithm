@@ -26,5 +26,20 @@ const solucation2 = (nums, target) => {
     return false
 }
 
+const solucation3 = (nums, target) => {
+    let leftIndex = 0
+    let rightIndex = nums.length - 1
+    while(leftIndex < rightIndex){
+        if(nums[leftIndex] + nums[rightIndex] <= target){
+
+            leftIndex++
+        } else{
+            rightIndex--
+        }
+    }
+
+    return false
+}
+
 console.log(solucation1([2,7,11,15],9))
 console.log(solucation2([2,7,11,15],9))
